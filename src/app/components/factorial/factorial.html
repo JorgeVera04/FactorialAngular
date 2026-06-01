@@ -1,0 +1,13 @@
+<div class="box-container">
+  <h2>Calcular Factorial</h2>
+  
+  <div class="group">
+    <label>Número para Factorial:</label>
+    <input type="number" [(ngModel)]="numFactorial" (input)="onInputFactorial()" min="0">
+  </div>
+
+  <div class="box-resultado">
+    <p>El factorial (!) es:</p>
+    <h3>{{ resultadoFactorial }}</h3>
+  </div>
+</div>

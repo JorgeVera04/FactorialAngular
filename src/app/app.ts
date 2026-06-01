@@ -1,11 +1,10 @@
-import { Component, signal } from '@angular/core';
+import { Component } from '@angular/core';
+import { FactorialComponent } from './components/factorial/factorial'; // <-- Apunta al nuevo componente
 
 @Component({
   selector: 'app-root',
-  imports: [],
+  imports: [FactorialComponent], // <-- Cargamos FactorialComponent
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
-export class App {
-  protected readonly title = signal('ProyectoFactorial');
-}
+export class App {}
