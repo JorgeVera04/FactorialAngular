@@ -6,7 +6,10 @@ import { Injectable } from '@angular/core';
 export class FactorialService {
 
   calcularFactorial(num: number): bigint {
-    if (num < 0) return 0n;
+
+    if (num < 0) {
+      return 0n;
+    }
 
     let resultado = 1n;
 
