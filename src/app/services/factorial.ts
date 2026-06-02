@@ -5,14 +5,15 @@ import { Injectable } from '@angular/core';
 })
 export class FactorialService {
 
-  calcularFactorial(num: number): number {
-    if (num < 0) return 0;
-    if (num === 0 || num === 1) return 1;
-    
-    let resultado = 1;
-    for (let i = 2; i <= num; i++) {
+  calcularFactorial(num: number): bigint {
+    if (num < 0) return 0n;
+
+    let resultado = 1n;
+
+    for (let i = 2n; i <= BigInt(num); i++) {
       resultado *= i;
     }
+
     return resultado;
   }
 }
